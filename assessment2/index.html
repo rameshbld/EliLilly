@@ -1,1 +1,20 @@
-
+<html>
+	<head>
+		<link type="text/css" href="site.css" rel="stylesheet" />
+	</head>
+	<body>
+	<div>
+		<label>Hover over data-dots for Stock Details</label>
+		<select id="select-company" onchange="getStockDetailsFormGraph(this);">
+			<option value="AAPL">AAPL</option>
+			<option value="MMM">3M Company</option>
+			<option value="ABBV">AbbVie Inc</option>
+		</select>
+	</div>
+	<div id="wrapper">
+	    <canvas id="graph" width=500 height=350></canvas>
+	    <canvas id="tip" width=300 height=25></canvas>
+	</div>
+	<script src="stock-tracker.js"></script>
+	</body>
+</html>

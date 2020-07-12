@@ -1,0 +1,20 @@
+body {
+    background-color: ivory;
+    margin-top:35px;
+}
+#wrapper {
+    position:relative;
+    width:800px;
+    height:350px;
+    margin-top: 15px;
+}
+canvas {
+    border:1px solid red;
+}
+#tip {
+    background-color:white;
+    border:1px solid blue;
+    position:absolute;
+    left:-200px;
+    top:100px;
+}
