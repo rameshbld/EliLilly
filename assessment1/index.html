@@ -1,1 +1,56 @@
-adfdfdf
+<html>
+<head>
+	<link type="text/css" href="site.css" rel="stylesheet" />
+	<script src="image-mapper.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div>
+			<div id="image-upload">
+				<label for="file" style="cursor: pointer;">Upload Image</label>
+				<input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;">
+				<label id="upload-error" style="color: red; display: none;">Upload Error</label>
+			</div>
+			<div id="image-info">
+				<table>
+					<tr>
+						<td>Image Name: </td><td id="upload-image-name"></td>
+					</tr>
+					<tr>
+						<td>Dimensions: </td><td id="upload-image-dimen"></td>
+					</tr>
+					<tr>
+						<td>MIME Type: </td><td id="upload-image-type"></td>
+					</tr>
+				</table>
+			</div>
+			<div id="image-container">
+				<img id="image-uplaoded" width="300" onclick="getClickedPosition(event,this);" usemap="#image-maps-2017-04-25-084654" alt="" />
+				<div id="comment-box">
+					<label>Description</label>
+					<input  id="input-comment" type="text" placeholder="Enter Description">
+					<div id="actions">
+						<input id="save-btn" type="button" value="&#10004; Save" onclick="saveComment();">
+						<input id="cancel-btn" type="button" value="&#10006; Cancel" onclick="cancelComment()">
+					</div>
+				</div>
+				
+				<div id="comments-display-box">
+					
+				</div>
+			</div>
+			<div id="coments-container">
+				<table id="added-coments">
+					<caption>Added Comments</caption>
+					<tr>
+						<th>X Pos</th>
+						<th>Y Pos</th>
+						<th>Description</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
